@@ -3,7 +3,7 @@ import { Command } from '../types/command';
 import { ownerGuard } from '../guards/ownerGuard';
 import commands from "../commands"
 
-class CommandHandler {
+export class CommandHandler {
     private ownerId: string;
 
     constructor(ownerId: string) {
@@ -28,5 +28,3 @@ class CommandHandler {
         }
     }
 }
-
-export default CommandHandler;
