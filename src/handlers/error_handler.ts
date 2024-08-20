@@ -1,9 +1,9 @@
-export default async function errorHandler<T>(fn: (...args: any[]) => Promise<void>) {
-    return async function (...args: any[]) {
+export default function errorHandler<T extends any[]>(fn: (...args1: T) => Promise<void>) {
+    return async function (...args2: T) {
         try {
-            await fn(...args);
+            await fn(...args2);
         } catch (error) {
-            console.error('Error:', error);
+
         }
     };
 }

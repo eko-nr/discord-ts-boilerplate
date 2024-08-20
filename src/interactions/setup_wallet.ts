@@ -1,7 +1,7 @@
 import { ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder } from "discord.js";
-import { InteractionFn } from "../types/command";
 import { InteractionId } from "../enums/InteractionId";
 import errorMessage from "../utils/errorMessage";
+import { InteractionFn } from "../types/types";
 
 const setupWallet: InteractionFn = async(interaction) => {
     try {

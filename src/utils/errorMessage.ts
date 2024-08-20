@@ -1,5 +1,5 @@
 import { ButtonInteraction, CacheType, Message } from "discord.js";
-import { ErrorMessageParams } from "../types/command";
+import { ErrorMessageParams } from "../types/types";
 
 const errorMessage = async<T>(param: ErrorMessageParams<T>) => {
     if(typeof param === typeof Message){
