@@ -1,0 +1,34 @@
+{
+  "name": "sniper_bot_dc",
+  "version": "1.0.0",
+  "description": "",
+  "type": "commonjs",
+  "exports": "./dist/index.js",
+  "scripts": {
+    "dev": "nodemon src/index.ts",
+    "build": "tsc",
+    "start": "ts-node src/index.ts",
+    "start:prod": "node dist/index.js",
+    "db:generate": "npx prisma generate",
+    "db:migrate:dev": "npx prisma migrate dev --name init",
+    "db:migrate": "npx prisma migrate deploy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^5.18.0",
+    "@seald-io/nedb": "^4.0.4",
+    "discord.js": "^14.15.3",
+    "dotenv": "^16.4.5",
+    "lowdb": "^7.0.1",
+    "prisma": "^5.18.0",
+    "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "@types/lowdb": "^1.0.15",
+    "@types/node": "^22.4.1",
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2"
+  }
+}
