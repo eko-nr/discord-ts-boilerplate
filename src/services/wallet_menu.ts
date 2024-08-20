@@ -1,6 +1,7 @@
 import { CommandExecuteFn } from "../types/command";
 import { ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder } from "discord.js";
 import errorMessage from "../utils/errorMessage";
+import { InteractionId } from "../enums/InteractionId";
 
 const walletMenu: CommandExecuteFn = async(client, message, args) => {
     try {
@@ -18,12 +19,12 @@ const walletMenu: CommandExecuteFn = async(client, message, args) => {
 
         const row = new ActionRowBuilder<ButtonBuilder>().addComponents(
             new ButtonBuilder()
-                .setCustomId('button1')
+                .setCustomId(InteractionId.setupWallet)
                 .setLabel('⚙️ Setup Wallet')
                 .setStyle(ButtonStyle.Primary),
 
             new ButtonBuilder()
-                .setCustomId('button2')
+                .setCustomId(InteractionId.transferAssets)
                 .setLabel('💸 Transfer assets')
                 .setStyle(ButtonStyle.Primary),
         );

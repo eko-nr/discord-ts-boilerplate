@@ -22,7 +22,6 @@ client.on('messageCreate', (message) => {
 });
 
 client.on('interactionCreate', (interaction) => {
-    if (!interaction.isChatInputCommand()) return;
     if (interaction.isButton()) {
         buttonInteractionHandler.handle(interaction)
     }

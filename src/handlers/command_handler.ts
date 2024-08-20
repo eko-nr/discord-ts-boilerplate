@@ -1,7 +1,7 @@
 import { Client, Message } from 'discord.js';
-import { Command } from '../types/command';
-import { ownerGuard } from '../guards/ownerGuard';
+import { ownerGuard } from '../guards/owner_guard';
 import commands from "../commands"
+import { privacyGuard } from '../guards/privacy_guard';
 
 export class CommandHandler {
     private ownerId: string;
@@ -20,6 +20,10 @@ export class CommandHandler {
         if (command) {
             if (command.ownerOnly && !ownerGuard(message, this.ownerId)) {
                 return; 
+            }
+
+            if(privacyGuard(message)){
+                return
             }
 
             command.execute(client, message, args);
