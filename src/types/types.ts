@@ -5,3 +5,8 @@ export type InteractionFn = (interaction: ButtonInteraction<CacheType>) => void 
 export type ErrorMessageParams<T> = T extends ButtonInteraction<CacheType> ? ButtonInteraction<CacheType> : Message;
 
 export type ErrorHandlerParams<T extends any[]> = [...T, isError: boolean]
+
+export interface ErrorParams {
+    isError: boolean;
+    errors: any;
+}

@@ -4,7 +4,7 @@ import errorMessage from "../utils/errorMessage";
 import { InteractionId } from "../constants/InteractionId";
 import errorHandler from "../handlers/error_handler";
 
-const walletMenu: CommandExecuteFn = async(client, message, args) => {
+const walletMenu: CommandExecuteFn = errorHandler(async(client, message, args, isError) => {
     try {
         const noWallet = "You don't have any wallet, you can setup wallet to generate or import wallet";
         const descriptionEmbed = 
@@ -38,7 +38,6 @@ const walletMenu: CommandExecuteFn = async(client, message, args) => {
         console.log('error walletMenu:', error);
         errorMessage(message)
     }
-}
-
+})
 
 export default walletMenu
