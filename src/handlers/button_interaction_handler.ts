@@ -15,6 +15,8 @@ export class ButtonInteractionHandler {
             case InteractionId.setupWallet:
                 setupWallet(interaction)
                 break;
+
+            
             
             default:
                 break;
