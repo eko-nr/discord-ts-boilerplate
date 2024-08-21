@@ -1,6 +1,6 @@
 import { ButtonInteraction, CacheType, Client, Interaction, Message } from 'discord.js';
 import { ownerGuard } from '../guards/owner_guard';
-import { InteractionId } from '../enums/InteractionId';
+import { InteractionId } from '../constants/InteractionId';
 import setupWallet from '../interactions/setup_wallet';
 
 export class ButtonInteractionHandler {

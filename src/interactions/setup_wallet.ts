@@ -1,5 +1,5 @@
 import { ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder } from "discord.js";
-import { InteractionId } from "../enums/InteractionId";
+import { InteractionId } from "../constants/InteractionId";
 import errorMessage from "../utils/errorMessage";
 import { InteractionFn } from "../types/types";
 

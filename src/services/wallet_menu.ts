@@ -1,7 +1,7 @@
 import {  CommandExecuteFn, ExecuteParams } from "../types/command";
 import { ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder } from "discord.js";
 import errorMessage from "../utils/errorMessage";
-import { InteractionId } from "../enums/InteractionId";
+import { InteractionId } from "../constants/InteractionId";
 import errorHandler from "../handlers/error_handler";
 
 const walletMenu: CommandExecuteFn = async(client, message, args) => {
